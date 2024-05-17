@@ -3,6 +3,11 @@
     margin-bottom: 10px;
 }
 
+.button
+{
+    margin-right: 5px;
+}
+
 .card-red
 {
     border-color: red;

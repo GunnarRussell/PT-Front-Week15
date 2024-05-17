@@ -26,6 +26,7 @@ export default function CommentForm(props) {
         //push comment to API
         createComment(newComment);
 
+        //empty input fields
         setInputName("");
         setInputText("");
     }
@@ -95,11 +96,16 @@ export default function CommentForm(props) {
 
   return (
     <div>
-        <div id="new-comment" className="jumbotron card shadow-sm new-comment-box">
-            <input type="text" onChange={handleNameChange} value={inputName} id="name" className="form-control w-50 new-comment-box-stuff" placeholder="Your Name"/>
-            <textarea onChange={handleTextChange} value={inputText} id="new-comment-text" className="form-control new-comment-box-stuff" rows="3" placeholder="Comment..."/>
+        {/* New Comment Form */}
+        <div className="jumbotron card shadow-sm new-comment-box">
+            {/* Input Name, uses onChange event to read input */}
+            <input type="text" onChange={handleNameChange} value={inputName} className="form-control w-50 new-comment-box-stuff" placeholder="Your Name"/>
+
+            {/* Input Comment, uses onChange event to read input */}
+            <textarea onChange={handleTextChange} value={inputText} className="form-control new-comment-box-stuff" rows="3" placeholder="Comment..."/>
             
-            <button onClick={createButton} id="submit-comment" className="btn btn-primary form-control">Post Comment</button>
+            {/* Submit Button */}
+            <button onClick={createButton} className="btn btn-primary form-control">Post Comment</button>
         </div>
         
     </div>

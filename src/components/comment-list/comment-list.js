@@ -69,7 +69,8 @@ export default function CommentList() {
 
         <h3>Discuss this article in the comments!</h3>
 
-        {/* for each 'comment' in the 'comments' array (from the state), perform a function that returns a rendered Comment component, and pass a few props to it */}
+        <br/>
+
         {comments.map(function(comment)
           {
             return(
@@ -87,6 +88,7 @@ export default function CommentList() {
         
         <br/>
 
+        <h3>Join the discussion!</h3>
         <CommentForm 
           totalComments = {comments}
           createComment = {createComment}
