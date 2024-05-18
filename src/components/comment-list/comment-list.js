@@ -25,13 +25,11 @@ export default function CommentList() {
     //must be an async function in order to use await keyword
     async function fetchComments()
     {
-        //use GET request to fetch comments from API
+        //use GET request to fetch array of comments from API
         const commentsData = await commentsAPI.get();
 
         //set state (comments) to array of fetched comments
         setComments(commentsData);
-
-        console.log(comments);
     };
 
     //updateComment passes specific comment to the commentsAPI PUT method in order to update it, and then sets the comment state to the newly updated and fetched comments
@@ -71,8 +69,10 @@ export default function CommentList() {
 
         <br/>
 
+        {/* Map over the comment array, for each comment in the array, perform the following function: */}
         {comments.map(function(comment)
           {
+            //return the Comment component and pass the state update functions to it as props
             return(
               <Comment
               comment = {comment}
@@ -89,6 +89,8 @@ export default function CommentList() {
         <br/>
 
         <h3>Join the discussion!</h3>
+
+        {/* Comment Form component */}
         <CommentForm 
           totalComments = {comments}
           createComment = {createComment}

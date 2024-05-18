@@ -16,11 +16,6 @@ class CommentsAPI
                 headers: {'Content-Type': 'application/json'}, //header says the data is in JSON format
                 body: JSON.stringify(comment) //body includes data inside the request. the data is converted into JSON format
             });
-
-            // //convert data into JSON (also need to wait for the data)
-            // const data = await response.json();
-
-            // return data;
         }
         catch(error) //handle error
         {
@@ -81,11 +76,6 @@ class CommentsAPI
                 method: 'DELETE', //DELETE method is for deleting data from API
                 headers: {'Content-Type': 'application/json'}, //header says the data is in JSON format
             });
-
-            // //convert data into JSON (also need to wait for the data)
-            // const data = await response.json();
-
-            // return data;
         }
         catch(error) //handle error
         {

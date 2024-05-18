@@ -7,8 +7,6 @@ import './comment.css';
 export default function Comment(props) {
     const {comment, updateComment, deleteComment} = props;
 
-    //ADD updateComment FUNCTIONALITY, edit comment text?
-
     //sends this comment's data to the DELETE request method
     function deleteButton()
     {
@@ -28,7 +26,7 @@ export default function Comment(props) {
 
   return (
     <div>  
-        {/* Comment Card */}
+        {/* Comment Card, uses React Bootstrap */}
         <Card className={cardColor}>
             {/* Comment Card Header */}
             <Card.Header className={headerColor}>
